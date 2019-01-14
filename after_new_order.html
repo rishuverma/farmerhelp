@@ -1,0 +1,187 @@
+<html>
+<head>
+	<title>new order for customer</title>
+	<script type="text/javascript">
+function jsfunc() {
+	hideit();
+	if(document.getElementById("fruits").checked==true){
+		//document.getElementById("res").style.display="none";
+		document.getElementById("fruitdiv").style.display="block";
+	}
+	if(document.getElementById("veg").checked==true){
+		//document.getElementById("res").style.display="none";
+		document.getElementById("vegdiv").style.display="block";
+	}
+	if(document.getElementById("grain").checked==true){
+		//document.getElementById("res").style.display="none";
+		document.getElementById("grainsdiv").style.display="block";
+	}
+	
+}
+	function hideit(){
+
+		//document.getElementById("res").style.display=
+		//var elem = document.getElementById("res");
+        //elem.parentNode.removeChild(elem);
+        var x=document.getElementById("fruitdiv");
+        x.style.display="none";
+        var y=document.getElementById("vegdiv");
+        y.style.display="none";
+        var z=document.getElementById("grainsdiv");
+        z.style.display="none";
+
+	}
+</script>
+<style type="text/css">
+body{
+	background-color: #A8A8A8;
+}
+	h1{
+		text-align: center;
+		text-decoration: underline;
+		
+
+	}
+	h2{
+		position: relative;
+		top:10%;
+		left:5%;
+	}
+	#h2{
+		/*position: relative;
+		top:10%;
+		left:-37%;*/
+		text-align: center;
+
+	}
+	#cropcat{
+		position: absolute;
+				top:30%;
+				left:50%;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 20px;
+				padding-right:20px;
+				background-color: #B8B8B8;
+				transition: transform .2s
+	}
+	#cropcat:hover {
+    transform: scale(1.5);
+}
+	#confirmbutton{
+		position: absolute;
+				top:40%;
+				left:57%;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				padding-left: 7px;
+				padding-right:7px;
+				background-color: white;
+
+	}
+	#fruitdiv{
+		position: absolute;
+		top:50%;
+		left:50%;
+		padding-top: 5px;
+				padding-bottom: 5px;
+				padding-left: 7px;
+				padding-right:7px;
+				background-color: #B8B8B8;
+				transition: transform .2s;
+
+	}
+	#vegdiv{
+		position: absolute;
+		top:50%;
+		left:50%;
+		padding-top: 5px;
+				padding-bottom: 5px;
+				padding-left: 7px;
+				padding-right:7px;
+				background-color: #B8B8B8;
+				transition: transform .2s;
+
+	}
+	#grainsdiv{
+		position: absolute;
+		top:50%;
+		left:50%;
+		padding-top: 5px;
+				padding-bottom: 5px;
+				padding-left: 7px;
+				padding-right:7px;
+				background-color: #B8B8B8;
+				transition: transform .2s;
+
+	}
+	#fruitdiv:hover {
+    transform: scale(1.5);
+}
+#vegdiv:hover {
+    transform: scale(1.5);
+}
+#grainssdiv:hover {
+    transform: scale(1.5);
+}
+	#submit{
+		position: relative;
+		left:75%;
+		top: 25%;
+	}
+
+
+
+</style>
+</head>
+
+<body>
+	<h1><strong>place your new order here</strong></h1><br>
+	
+
+	<div><h2>hello, this is your personal page</h2></div><hr><br>
+	<div><h2 id='h2'>what you want to buy?</h2></div>
+	<form action="place_order.php" method="post">
+<div id="cropcat">	<input type="radio" id="fruits" name="cropcategory" >fruits<br>
+	<input type="radio" id="veg" name="cropcategory">veg<br>
+	<input type="radio" id="grain" name="cropcategory">grain<br>
+</div>
+<input type="button" value="confirm" onclick="jsfunc()" id="confirmbutton">
+<div id='fruitdiv' style="display:none;">
+	<p><h4>available things in this category</h4></p>
+	<input type="radio" id="apple"  name="fruitcategory">apple<br>
+
+	<input type="radio" id="banana" name="fruitcategory">banana<br>
+	<input type="radio" id="oranges" name="fruitcategory">oranges<br>
+	<input type="radio" id="grapes" name="fruitcategory">grapes<br>
+	<input type="radio" id="guava" name="fruitcategory">guava<br>
+	<input type="submit" id="submit">
+
+</div>
+<div id='vegdiv' style="display:none;">
+	<p><h4>available things in this category</h4></p>
+	<input type="radio" id="potato"  name="vegcategory">potato<br>
+	<input type="radio" id="tomato" name="vegcategory">tomato<br>
+	<input type="radio" id="onion" name="vegcategory">onion<br>
+	<input type="radio" id="okra" name="vegcategory">okra<br>
+	<input type="submit" id="submit">
+
+	
+
+</div>
+<div id='grainsdiv' style="display:none;">
+	<p><h4>available things in this category</h4></p>
+	<input type="radio" id="wheat" name="graincategory">wheat<br>
+	<input type="radio" id="rice" name="graincategory">rice<br>
+	<input type="radio" id="corn" name="graincategory">corn<br>
+	<input type="radio" id="grams" name="graincategory">grams<br>
+	<input type="submit" id="submit">
+	
+
+</div>
+
+<div id="res"></div>
+
+</form>
+</body>
+</html>

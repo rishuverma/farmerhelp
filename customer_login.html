@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>
+	Customer Login
+</title>
+<style type=text/css> 
+#d1
+{ 
+  padding:1%;
+  height:120px;
+  color: white; 
+  background-color:green; 
+  margin: 2px;  
+} 
+#im
+{ 
+  padding:1%;
+  eight:400px; 
+  ackground-color:yellow 
+  argin: 2px;
+  position:absolute;
+  left:-80%;
+  top:30%;
+  width:50%;  
+}
+#d2
+{
+ position:absolute;
+ left:55%;
+ width:50%;
+ top:30%;
+}
+</style>
+</head>
+<body>
+<div id="d1">
+	<form action="login_firstpagese.php" method="post">
+	<table>
+		<tr>
+			<td rowspan="3" style="width:50%; color:white;text-align:center;font-size:30px">Login to your account</td>
+			<td style="width:3%" cellpadding="2px">
+					<tr><td style="color:white">Phone</td><td style="color:white">Password</td><td style="color:white">User</td></tr>
+					<tr><td><input type="tel" name="login_mobile"></td>
+						<td><input type="password" name="login_password"></td>
+						<td><input type="radio" name="login_user" ><span style="color:white">As Farmer</span></td><td><input type="radio" name="user"><span style="color:white">As Customer</span></td>
+						<td><input type="submit" value="Login"/></td>
+					</tr>
+			</td>
+		</tr>
+	</table>
+	</form>
+</div>
+<div id="d2" class="d2left">
+	<h2>Create an account</h2>
+	<form action="new_customer.php" method="post">
+	<table>
+		<tr><td><input type="radio" name="user" style="padding-bottom:6px; padding-top:6px" >As Farmer</td><td><input type="radio" name="user" style="padding-bottom:6px; padding-top:6px" >As Customer</td></tr>
+		<tr><td><input type="text" placeholder="first name" style="padding-bottom:6px; padding-top:6px" name="f_name"></td><td><input type="text" placeholder="last name" name="l_name" style="padding-bottom:6px; padding-top:6px"></td></tr>
+		<tr><td colspan="3"><input type="tel" placeholder="mobile no." style="padding-bottom:6px; padding-top:6px" name="mobile"></td></tr>
+		<tr><td colspan="3"><input type="password" placeholder="new password" style="padding-bottom:6px; padding-top:6px" name="password"></td></tr>
+		<tr><td colspan="3"><input type="number" placeholder="pincode" style="padding-bottom:6px; padding-top:6px" name="pincode"></td></tr>
+		<tr><td colspan="3"><input type="submit" value="Sign up" style="padding-bottom:6px; padding-top:6px" ></td></tr>
+	</table></form>
+</div>
+<div id="d2" class="d2right">
+	<img id="im" src="farm.jpeg">
+</div>
+</body>
+</html>
